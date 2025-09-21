@@ -1,2 +1,5 @@
 # macOS system files
 .DS_Store
+assets/.DS_Store
+assets/images/.DS_Store
+assets/videos/.DS_Store
