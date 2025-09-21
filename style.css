@@ -1,0 +1,206 @@
+/* ========= ROOT VARIABLES ========= */
+:root {
+  --brand: #D96913;              /* Primary brand color (buttons, highlights) */
+  --brand-contrast: #ffffff;     /* Text/icon color on brand backgrounds */
+  --accent: #E08C4B;             /* Secondary accent (hover, subtle highlights) */
+  --radius: 10px;                /* Default border radius for components */
+  --shadow: 0 6px 20px rgba(0,0,0,.15); /* Default soft shadow */
+}
+
+/* ========= Light theme ========= */
+:root[data-theme="light"] {
+  --bg: #F2F2F2;                 /* Page background */
+  --surface: #E6AE83;            /* Cards, header, nav, panels */
+  --text: #0A111F;               /* Primary text on light BG */
+  --text-muted: rgba(10,17,31,.65); /* Secondary text on light BG */
+  --border: #DD7B2F;             /* Divider/border lines */
+  --link: #A65316;               /* Link color on light BG */
+  --link-hover: #D96913;         /* Link hover on light BG (brand) */
+}
+
+/* ========= Dark theme ========= */
+:root[data-theme="dark"] {
+  --bg: #050910;                 /* Page background (rich black) */
+  --surface: #0A111F;            /* Cards, header, nav, panels */  
+  --text: #F2F2F2;               /* Primary text on dark BG */
+  --text-muted: rgba(242,242,242,.7); /* Secondary text on dark BG */
+  --border: rgba(242,242,242,.12);    /* Subtle borders on dark BG */
+  --link: #DD7B2F;               /* Link color on dark BG */
+  --link-hover: #D96913;         /* Link hover on dark BG (brand) */
+}
+
+/* Smooth transition between light and dark mode */
+html, body {transition: background-color .45s ease, color .45s ease;}
+header, .navbar, .dropdown-menu, .card, .panel {transition: background-color .45s ease, border-color .45s ease, color .45s ease;}
+a, .btn, .btn-primary, .btn-outline {transition: color .2s ease, background-color .2s ease, border-color .2s ease;}
+svg, .icon {transition: fill .45s ease, stroke .45s ease, color .45s ease;}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Sansation, sans-serif;
+    
+}
+
+body {
+    line-height: 1.6;
+    background-color: var(--bg);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;    
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+/* HEADER SECTION */
+header {    
+    color: var(--text);    
+    position: fixed;
+    top: 0;       
+    width: 100%;    
+    background-color: var(--surface);   
+    font-size: 1rem; 
+}
+
+.navbar {         
+    height: 56px;
+    max-width: 1300px;    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;    
+    font-weight: 900;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+    line-height: .9;
+    text-shadow: var(--shadow);
+}
+
+.logo a {
+    color: #fff;
+}
+
+.logo span {
+    color: var(--brand);    
+}
+
+.logo a:hover {
+    color: #fff;
+}
+
+.logo:hover {
+    scale: 1.05;    
+}
+
+.logo:active {
+    scale: 0.95;
+}
+
+.nav-right {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 3rem;
+    font-weight: bold;     
+}
+
+.nav-toggles {
+    display: flex;
+    gap: 1rem;
+}
+
+.dropdown-toggle {
+    font-size: 1.5rem;
+    display: none;
+    color: #fff;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: scale 0.2s ease;
+    color: #fff;
+}
+
+.theme-toggle:hover {
+    scale: 1.1;    
+}
+
+.theme-toggle:active {
+    scale: 0.75;
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+    position: absolute;
+    right: 2rem;
+    top: 56px;
+    width: 300px;
+    background-color: rgba(230, 174, 131, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown-menu.open {
+    height: 140px;
+}
+
+.dropdown-menu li {
+    cursor: pointer;
+    padding: 0.7rem;
+    display: flex;    
+    justify-content: center;
+    align-items: center;    
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 992px) {   
+    .nav-links {
+        display: none;
+    }
+
+    .dropdown-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown-menu {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+
+/* HERO SECTION */
+.hero-section {
+    height: 200vh;    
+}
