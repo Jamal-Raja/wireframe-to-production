@@ -181,8 +181,8 @@ header {
     right: 2rem;
     top: 56px;
     width: 300px;
-    background-color: rgba(230, 174, 131, 0.1);
-    backdrop-filter: blur(15px);
+    background-color: rgba(230, 174, 131, 0.4);
+    backdrop-filter: blur(15px);    
     border-radius: 10px;
     overflow: hidden;
     height: 0;
@@ -199,6 +199,11 @@ header {
     display: flex;    
     justify-content: center;
     align-items: center;    
+}
+
+.dropdown-menu li a {
+    color: #fff;
+    font-weight: 800;    
 }
 
 /* RESPONSIVE DESIGN */
