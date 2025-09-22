@@ -42,7 +42,6 @@ svg, .icon {transition: fill .45s ease, stroke .45s ease, color .45s ease;}
     padding: 0;
     box-sizing: border-box;
     font-family: Sansation, sans-serif;
-    
 }
 
 html {
@@ -264,9 +263,9 @@ header {
   inset: 0;
   background: linear-gradient(
     to right,
-    rgba(0, 0, 0, 0.7) 0%,   /* darker on the left */
-    rgba(0, 0, 0, 0.4) 40%,  /* softer in the middle */
-    rgba(0, 0, 0, 0.0) 100%  /* fully clear on the right */
+    rgba(0, 0, 0, 0.7) 0%,   
+    rgba(0, 0, 0, 0.4) 40%,  
+    rgba(0, 0, 0, 0.0) 100%  
   );
   z-index: 1;
 }
@@ -379,7 +378,6 @@ header {
 }
 
 /* RESPONSIVE DESIGN */
-
 @media(max-width: 992px) {
     .fancy-section-content {
         grid-template-columns: 1fr;
@@ -399,8 +397,7 @@ header {
     background-color: var(--bg-contrast);
 }
 
-.i-services-container {
-    /* border: 1px solid pink; */
+.i-services-container {    
     display: flex;
     flex-wrap: wrap;    
     max-width: 1200px;
@@ -465,7 +462,6 @@ header {
 }
 
 /* RESPONSIVE DESIGN */
-
 @media(max-width: 576px) {    
     .footer-section {
         padding: 1rem 0;
