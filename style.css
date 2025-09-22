@@ -335,10 +335,13 @@ header {
 }
 
 .fancy-section img {
+    display: block;
     max-width: 1200px;
+    width: 100%;
+    height: auto;
     border-radius: 64px;
-    display: flex;
     margin: 0 auto;    
+    padding: 0 16px;
 }
 
 .fancy-section-content {
@@ -367,3 +370,26 @@ header {
 .fancy-section-content .btn {
     margin-top: 0;
 }
+
+/* RESPONSIVE DESIGN */
+
+@media(max-width: 992px) {
+    .fancy-section-content {
+        grid-template-columns: 1fr;
+         row-gap: 2rem;
+         text-align: center;         
+         margin: 3rem auto 2rem auto;
+    }
+
+    .fancy-section-content h1 {
+        margin: 0 auto
+    }
+    
+    .fancy-section img {
+        margin 0 16px;
+    }
+}
+
+/* INDEX SERVICES SECTION */
+
+/* FOOTER */
