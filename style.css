@@ -10,6 +10,7 @@
 /* ========= Light theme ========= */
 :root[data-theme="light"] {
   --bg: #F2F2F2;                 /* Page background */
+  --bg-contrast: #212121;                 /* Page Background Contrast */
   --surface: #E6AE83;            /* Cards, header, nav, panels */
   --text: #0A111F;               /* Primary text on light BG */
   --text-muted: rgba(10,17,31,.65); /* Secondary text on light BG */
@@ -21,6 +22,7 @@
 /* ========= Dark theme ========= */
 :root[data-theme="dark"] {
   --bg: #050910;                 /* Page background (rich black) */
+  --bg-contrast: #212121;                 /* Page Background Contrast */
   --surface: #0A111F;            /* Cards, header, nav, panels */  
   --text: #F2F2F2;               /* Primary text on dark BG */
   --text-muted: rgba(242,242,242,.7); /* Secondary text on dark BG */
