@@ -1,3 +1,4 @@
+// ======== DROPDOWN MENU FUNCTIONALITY ======== //  
 // Handles the dropdown menu toggle: opens/closes the menu and switches the button icon between hamburger and X
 const toggleBtn = document.querySelector('.dropdown-toggle')
 const toggleBtnIcon= document.querySelector('.dropdown-toggle i')
@@ -12,20 +13,45 @@ toggleBtn.onclick = function () {
     : 'fa-solid fa-bars'
 }
 
-// Changes the theme between dark/light and switches the button icon between sun and moon 
-const themeToggleBtn = document.querySelector('.theme-toggle')
-const themeToggleBtnIcon = document.querySelector('.theme-toggle i')
-const currentTheme = document.documentElement.getAttribute("data-theme")
+// ======== THEME TOGGLE FUNCTIONALITY ======== //  
+// grab the toggle btn and icon inside it 
+const btn = document.querySelector('.theme-toggle');
+const icon = document.querySelector('.theme-toggle i')
 
-themeToggleBtn.onclick = function () {
-    if (document.documentElement.getAttribute("data-theme") == "light") {
-        document.documentElement.setAttribute("data-theme", "dark")
-        themeToggleBtnIcon.classList.remove('fa-moon')
-        themeToggleBtnIcon.classList.add('fa-sun')
-    }
-    else { 
-        document.documentElement.setAttribute("data-theme", "light")
-        themeToggleBtnIcon.classList.remove('fa-sun')
-        themeToggleBtnIcon.classList.add('fa-moon')
+// Function to update the theme of the page and store this state in the localStorage
+function applyTheme(theme) {
+    // 1) Update the <html data-theme="..."> attribute so CSS switches colours
+    document.documentElement.setAttribute('data-theme', theme);
+
+    // 2) Remember the choice so other pages can read it
+    localStorage.setItem('theme', theme); 
+
+    // Update the theme-toggle icon with a sun or moon
+    if (!btn || !icon) return; // safety if the elements aren't on this page
+    
+    if (theme === 'dark') {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun')
+        btn.setAttribute('aria-pressed', 'true');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        btn.setAttribute('aria-pressed', 'false');
     }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    // once page has loaded update the theme with the theme from the localStorage or default it to light
+    const saved = localStorage.getItem('theme');
+    const current = document.documentElement.getAttribute('data-theme') || 'light';
+    applyTheme(saved || current);
+    
+    if (btn) {
+        btn.addEventListener('click', () => {
+            const now = document.documentElement.getAttribute('data-theme') || 'light';
+            const next = (now === 'light') ? 'dark' : 'light';
+            applyTheme(next);
+        });
+    }
+});
+
