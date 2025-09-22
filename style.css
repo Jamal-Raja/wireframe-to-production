@@ -22,7 +22,7 @@
 /* ========= Dark theme ========= */
 :root[data-theme="dark"] {
   --bg: #050910;                 /* Page background (rich black) */
-  --bg-contrast: #212121;                 /* Page Background Contrast */
+  --bg-contrast: #0D141F;                 /* Page Background Contrast */
   --surface: #0A111F;            /* Cards, header, nav, panels */  
   --text: #F2F2F2;               /* Primary text on dark BG */
   --text-muted: rgba(242,242,242,.7); /* Secondary text on dark BG */
@@ -394,5 +394,56 @@ header {
 }
 
 /* INDEX SERVICES SECTION */
+.i-services-section {        
+    border: 1px solid var(--bg-contrast);
+    background-color: var(--bg-contrast);
+}
+
+.i-services-container {
+    /* border: 1px solid pink; */
+    display: flex;
+    flex-wrap: wrap;    
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 16px;
+    position: relative;
+    gap: 1rem;
+}
+
+.i-service {
+    position: relative;
+    flex: 1 1 calc(50% - 1rem);
+    overflow: hidden;
+    border-radius: 2rem;
+    
+    
+}
+
+.i-service img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+    transition: transform 0.2s ease;    
+    
+}
+
+.i-service img:hover {
+    transform: scale(1.15);
+}
+
+.i-service a {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;    
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 768px) {
+    .i-service {
+        flex: 1 1 100%; 
+    }
+}
 
 /* FOOTER */
