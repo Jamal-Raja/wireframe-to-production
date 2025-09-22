@@ -13,7 +13,6 @@ toggleBtn.onclick = function () {
 }
 
 // Changes the theme between dark/light and switches the button icon between sun and moon 
-
 const themeToggleBtn = document.querySelector('.theme-toggle')
 const themeToggleBtnIcon = document.querySelector('.theme-toggle i')
 const currentTheme = document.documentElement.getAttribute("data-theme")
