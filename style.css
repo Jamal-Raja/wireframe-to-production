@@ -624,7 +624,6 @@ header {
 }
 
 /* RESPONSIVE DESSIGN */
-
 @media(max-width: 992px) {
     .about-card {
         flex: 1 1 100%;
