@@ -590,7 +590,7 @@ header {
     height: auto;    
     max-width: 1400px;
     margin: 0 auto;
-    padding: 4rem 0;
+    padding: calc(2.5rem + 56px) 0;
 }
 
 .about-card {    
