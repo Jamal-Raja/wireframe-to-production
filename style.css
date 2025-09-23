@@ -636,7 +636,6 @@ header {
     }
 
     .about-card:nth-of-type(4) {
-        border: 8px solid red;
         order: -1;
     }
 
