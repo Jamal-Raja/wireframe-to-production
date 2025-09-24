@@ -671,20 +671,17 @@ header {
 
 /* ========= CONTACT PAGE ========= */
 /* CONTACT SECTION */
-.contact-section {
-    height: 100vh;
+.contact-section {    
     display: flex;
     max-width: 1400px;
     justify-content: center;
     align-items: center;
-    /* border: 8px solid greenyellow; */
     margin: 0 auto;
     padding: calc(2.5rem + 56px) 2rem;
     gap: 2rem;
 }
 
-.contact-card {
-    /* border: 8px solid red; */
+.contact-card {    
     color: var(--text);
     width: 100%;
     height: 100%;
@@ -718,8 +715,7 @@ header {
     margin-left: 2rem;
 }
 
-.contact-form {
-    /* border: 8px solid aquamarine; */
+.contact-form {    
     border-radius: 2rem;
     padding: 1rem 1rem;
     background-color: rgba(246, 186, 122, 0.448);
@@ -783,4 +779,16 @@ header {
   0%   { box-shadow: 0 0 8px rgba(0, 204, 68, 0.6); }
   50%  { box-shadow: 0 0 12px rgba(0, 204, 68, 0.8); }
   100% { box-shadow: 0 0 8px rgba(0, 204, 68, 0.6); }
+}
+
+/* RESPONSIVE DESSIGN */
+@media(max-width: 992px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
 }
