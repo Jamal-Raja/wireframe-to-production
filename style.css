@@ -573,10 +573,9 @@ header {
     background: rgba(23, 32, 42, 0.9);
 }
 
-
-@media(max-width: 992px) {    
+@media(max-width: 1375px) {
     .service-description-card h1 {
-        font-size: 12;
+        font-size: 1.5rem;
     }
     .service-description-card p {
         font-size: 0.7rem;
@@ -593,21 +592,44 @@ header {
         text-align: center;
     }
     .services-header p {    
-    max-width: unset;    
+        max-width: unset;    
     }
     .service-description-card {
         transform: translateY(87%);
-    }
-}
-
-@media(max-width: 1375px) {
-    .service-description-card h1 {
-        font-size: 1.5rem;
     }
     .service-description-card p {
         font-size: 0.7rem;
         padding-bottom: 0.35rem;
     }
+}
+@media(max-width: 828px) {
+    .service-description-card {
+        transform: translateY(83%);
+    }
+}
+
+@media(max-width: 828px) {
+    .service-description-card {
+        transform: translateY(80%);
+    }
+}
+@media(max-width: 576px) {
+    .service-description-card h1 {        
+        font-size: 16px;
+    }
+    .service-description-card p {
+        font-size: 0.5rem;
+    }
+}
+@media(max-width: 445px) {
+    .service-description-card {
+        transform: translateY(76%);
+    }    
+}
+@media(max-width: 367px) {
+    .service-description-card {
+        transform: translateY(72%);
+    }    
 }
 
 /* ========= ABOUT PAGE ========= */
