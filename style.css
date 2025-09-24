@@ -701,6 +701,10 @@ header {
     left: -2rem;
 }
 
+.contact-card:last-of-type h2 { 
+    margin: 0;
+}
+
 .contact-card:last-of-type h2::before {
     display: none;
 }
