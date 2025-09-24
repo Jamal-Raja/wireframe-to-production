@@ -604,12 +604,6 @@ header {
 }
 @media(max-width: 828px) {
     .service-description-card {
-        transform: translateY(83%);
-    }
-}
-
-@media(max-width: 828px) {
-    .service-description-card {
         transform: translateY(80%);
     }
 }
